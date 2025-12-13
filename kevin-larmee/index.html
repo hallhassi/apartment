@@ -2,15 +2,31 @@
 <html lang="en">
 
 <head>
+    <title>9/13/24</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        
         body {
             margin-bottom: 3em;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 1px;
+        }
+
+        pre {
+            grid-column: span 3;
         }
 
         img {
-            max-width: 33%;
+            width: 100%;
+            grid-column: span 3;
+        }
+
+        @media screen and (min-width: 400px) {
+            img {
+                grid-column: span 1;
+            }
         }
     </style>
     <title>9/13/24</title>

@@ -19,29 +19,27 @@
 </style>
 </head>
 <body>
-<a class="random" data-random-link href="1.html"><img data-random-image src="../lo/blaise-larmee/01.jpg" alt=""></a>
+<a class="random" data-random-link href="1.html"><img data-random-image src="../lo/blaise-larmee/1.jpg" alt=""></a>
 <nav><a href="../">apartment gallery</a></nav>
 <h1>blaise larmee</h1>
-<section class="gallery"><a class="gallery-link" href="1.html?image=01.jpg"><img src="../lo/blaise-larmee/01.jpg" alt="01.jpg"></a>
-<a class="gallery-link" href="2.html?image=02.jpg"><img src="../lo/blaise-larmee/02.jpg" alt="02.jpg"></a>
-<a class="gallery-link" href="3.html?image=03.jpg"><img src="../lo/blaise-larmee/03.jpg" alt="03.jpg"></a>
-<a class="gallery-link" href="4.html?image=04.jpg"><img src="../lo/blaise-larmee/04.jpg" alt="04.jpg"></a>
-<a class="gallery-link" href="5.html?image=05.jpg"><img src="../lo/blaise-larmee/05.jpg" alt="05.jpg"></a>
-<a class="gallery-link" href="6.html?image=06.jpg"><img src="../lo/blaise-larmee/06.jpg" alt="06.jpg"></a>
-<a class="gallery-link" href="7.html?image=07.jpg"><img src="../lo/blaise-larmee/07.jpg" alt="07.jpg"></a>
-<a class="gallery-link" href="8.html?image=08.jpg"><img src="../lo/blaise-larmee/08.jpg" alt="08.jpg"></a>
-<a class="gallery-link" href="9.html?image=09.jpg"><img src="../lo/blaise-larmee/09.jpg" alt="09.jpg"></a>
-<a class="gallery-link" href="10.html?image=10.jpg"><img src="../lo/blaise-larmee/10.jpg" alt="10.jpg"></a>
-<a class="gallery-link" href="11.html?image=11.jpg"><img src="../lo/blaise-larmee/11.jpg" alt="11.jpg"></a></section>
+<section class="gallery"><a class="gallery-link" href="1.html"><img src="../lo/blaise-larmee/1.jpg" alt="1.jpg"></a>
+<a class="gallery-link" href="2.html"><img src="../lo/blaise-larmee/2.jpg" alt="2.jpg"></a>
+<a class="gallery-link" href="3.html"><img src="../lo/blaise-larmee/3.jpg" alt="3.jpg"></a>
+<a class="gallery-link" href="4.html"><img src="../lo/blaise-larmee/4.jpg" alt="4.jpg"></a>
+<a class="gallery-link" href="5.html"><img src="../lo/blaise-larmee/5.jpg" alt="5.jpg"></a>
+<a class="gallery-link" href="6.html"><img src="../lo/blaise-larmee/6.jpg" alt="6.jpg"></a>
+<a class="gallery-link" href="7.html"><img src="../lo/blaise-larmee/7.jpg" alt="7.jpg"></a>
+<a class="gallery-link" href="8.html"><img src="../lo/blaise-larmee/8.jpg" alt="8.jpg"></a>
+<a class="gallery-link" href="9.html"><img src="../lo/blaise-larmee/9.jpg" alt="9.jpg"></a>
+<a class="gallery-link" href="10.html"><img src="../lo/blaise-larmee/10.jpg" alt="10.jpg"></a>
+<a class="gallery-link" href="11.html"><img src="../lo/blaise-larmee/11.jpg" alt="11.jpg"></a></section>
 <script>
-    const images = [{"image":"01.jpg","preview":"../lo/blaise-larmee/01.jpg","page":"1.html"},{"image":"02.jpg","preview":"../lo/blaise-larmee/02.jpg","page":"2.html"},{"image":"03.jpg","preview":"../lo/blaise-larmee/03.jpg","page":"3.html"},{"image":"04.jpg","preview":"../lo/blaise-larmee/04.jpg","page":"4.html"},{"image":"05.jpg","preview":"../lo/blaise-larmee/05.jpg","page":"5.html"},{"image":"06.jpg","preview":"../lo/blaise-larmee/06.jpg","page":"6.html"},{"image":"07.jpg","preview":"../lo/blaise-larmee/07.jpg","page":"7.html"},{"image":"08.jpg","preview":"../lo/blaise-larmee/08.jpg","page":"8.html"},{"image":"09.jpg","preview":"../lo/blaise-larmee/09.jpg","page":"9.html"},{"image":"10.jpg","preview":"../lo/blaise-larmee/10.jpg","page":"10.html"},{"image":"11.jpg","preview":"../lo/blaise-larmee/11.jpg","page":"11.html"}];
-    const requested = new URLSearchParams(window.location.search).get('image');
-    const selected = images.find((item) => item.image === requested) || images[Math.floor(Math.random() * images.length)];
+    const images = [{"preview":"../lo/blaise-larmee/1.jpg","page":"1.html"},{"preview":"../lo/blaise-larmee/2.jpg","page":"2.html"},{"preview":"../lo/blaise-larmee/3.jpg","page":"3.html"},{"preview":"../lo/blaise-larmee/4.jpg","page":"4.html"},{"preview":"../lo/blaise-larmee/5.jpg","page":"5.html"},{"preview":"../lo/blaise-larmee/6.jpg","page":"6.html"},{"preview":"../lo/blaise-larmee/7.jpg","page":"7.html"},{"preview":"../lo/blaise-larmee/8.jpg","page":"8.html"},{"preview":"../lo/blaise-larmee/9.jpg","page":"9.html"},{"preview":"../lo/blaise-larmee/10.jpg","page":"10.html"},{"preview":"../lo/blaise-larmee/11.jpg","page":"11.html"}];
+    const selected = images[Math.floor(Math.random() * images.length)];
     const link = document.querySelector('[data-random-link]');
     const image = document.querySelector('[data-random-image]');
-    link.href = selected.page + '?image=' + encodeURIComponent(selected.image);
+    link.href = selected.page;
     image.src = selected.preview;
-    image.alt = selected.image;
 </script>
 </body>
 </html>

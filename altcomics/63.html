@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>altcomics - IMG_3314.HEIC.jpg</title>
+    <style>
+    :root { font-family: Georgia, serif; color: #111; }
+    body { line-height: 1.5; margin: 1em 1em 3em; }
+    a { color: inherit; text-decoration: none; }
+    nav a, .gallery-link { display: inline-block; padding: .7em 1em; }
+    .random { display: block; margin: 1em 0; }
+    .random img { display: block; max-height: 75vh; max-width: 100%; object-fit: contain; }
+    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 4px; }
+    .gallery img { display: block; height: 180px; object-fit: cover; width: 100%; }
+    .single { align-items: center; display: flex; flex-direction: column; min-height: 70vh; }
+    .single img { max-height: 78vh; max-width: 100%; object-fit: contain; }
+    .navigation { display: flex; justify-content: space-between; width: min(100%, 900px); }
+</style>
+</head>
+<body>
+<nav class="navigation"><a href="62.html">prev</a><a href="index.html">altcomics</a><a href="64.html">next</a></nav>
+<main class="single"><img src="IMG_3314.HEIC.jpg" alt="IMG_3314.HEIC.jpg"></main>
+<script>
+    document.addEventListener('keydown', (event) => {
+        if (event.shiftKey || event.ctrlKey || event.altKey || event.metaKey) return;
+        if (event.key === 'ArrowLeft' && "62.html") window.location.href = "62.html";
+        if (event.key === 'ArrowRight' && "64.html") window.location.href = "64.html";
+    });
+</script>
+</body>
+</html>

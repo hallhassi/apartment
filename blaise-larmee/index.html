@@ -1,17 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>a{text-decoration:none;color:black;display:block;padding:1em;float:left;}img{max-width:100%;}body{line-height:1.5em;margin:1em 1em 3em 1em;}</style>
-  <title>1/20/24</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1/20/24 - blaise larmee</title>
+    <style>
+    :root { font-family: Georgia, serif; color: #111; }
+    body { line-height: 1.5; margin: 1em 1em 3em; }
+    a { color: inherit; text-decoration: none; }
+    nav a, .gallery-link { display: inline-block; padding: .7em 1em; }
+    .random { display: block; margin: 1em 0; }
+    .random img { display: block; max-height: 75vh; max-width: 100%; object-fit: contain; }
+    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 4px; }
+    .gallery img { display: block; height: 180px; object-fit: cover; width: 100%; }
+    .single { align-items: center; display: flex; flex-direction: column; min-height: 70vh; }
+    .single img { max-height: 78vh; max-width: 100%; object-fit: contain; }
+    .navigation { display: flex; justify-content: space-between; width: min(100%, 900px); }
+</style>
 </head>
-
 <body>
-  <a href="../">apartment.gallery</a> blaise larmee
-  <img src="01.jpg"><img src="02.jpg"><img src="03.jpg"><img src="04.jpg"><img src="05.jpg"><img
-    src="06.jpg"><img src="07.jpg"><img src="08.jpg"><img src="09.jpg"><img src="10.jpg"><img src="11.jpg">
+<a class="random" data-random-link href="1.html"><img data-random-image src="../lo/blaise-larmee/01.jpg" alt=""></a>
+<nav><a href="../">apartment gallery</a></nav>
+<h1>blaise larmee</h1>
+<section class="gallery"><a class="gallery-link" href="1.html?image=01.jpg"><img src="../lo/blaise-larmee/01.jpg" alt="01.jpg"></a>
+<a class="gallery-link" href="2.html?image=02.jpg"><img src="../lo/blaise-larmee/02.jpg" alt="02.jpg"></a>
+<a class="gallery-link" href="3.html?image=03.jpg"><img src="../lo/blaise-larmee/03.jpg" alt="03.jpg"></a>
+<a class="gallery-link" href="4.html?image=04.jpg"><img src="../lo/blaise-larmee/04.jpg" alt="04.jpg"></a>
+<a class="gallery-link" href="5.html?image=05.jpg"><img src="../lo/blaise-larmee/05.jpg" alt="05.jpg"></a>
+<a class="gallery-link" href="6.html?image=06.jpg"><img src="../lo/blaise-larmee/06.jpg" alt="06.jpg"></a>
+<a class="gallery-link" href="7.html?image=07.jpg"><img src="../lo/blaise-larmee/07.jpg" alt="07.jpg"></a>
+<a class="gallery-link" href="8.html?image=08.jpg"><img src="../lo/blaise-larmee/08.jpg" alt="08.jpg"></a>
+<a class="gallery-link" href="9.html?image=09.jpg"><img src="../lo/blaise-larmee/09.jpg" alt="09.jpg"></a>
+<a class="gallery-link" href="10.html?image=10.jpg"><img src="../lo/blaise-larmee/10.jpg" alt="10.jpg"></a>
+<a class="gallery-link" href="11.html?image=11.jpg"><img src="../lo/blaise-larmee/11.jpg" alt="11.jpg"></a></section>
+<script>
+    const images = [{"image":"01.jpg","preview":"../lo/blaise-larmee/01.jpg","page":"1.html"},{"image":"02.jpg","preview":"../lo/blaise-larmee/02.jpg","page":"2.html"},{"image":"03.jpg","preview":"../lo/blaise-larmee/03.jpg","page":"3.html"},{"image":"04.jpg","preview":"../lo/blaise-larmee/04.jpg","page":"4.html"},{"image":"05.jpg","preview":"../lo/blaise-larmee/05.jpg","page":"5.html"},{"image":"06.jpg","preview":"../lo/blaise-larmee/06.jpg","page":"6.html"},{"image":"07.jpg","preview":"../lo/blaise-larmee/07.jpg","page":"7.html"},{"image":"08.jpg","preview":"../lo/blaise-larmee/08.jpg","page":"8.html"},{"image":"09.jpg","preview":"../lo/blaise-larmee/09.jpg","page":"9.html"},{"image":"10.jpg","preview":"../lo/blaise-larmee/10.jpg","page":"10.html"},{"image":"11.jpg","preview":"../lo/blaise-larmee/11.jpg","page":"11.html"}];
+    const requested = new URLSearchParams(window.location.search).get('image');
+    const selected = images.find((item) => item.image === requested) || images[Math.floor(Math.random() * images.length)];
+    const link = document.querySelector('[data-random-link]');
+    const image = document.querySelector('[data-random-image]');
+    link.href = selected.page + '?image=' + encodeURIComponent(selected.image);
+    image.src = selected.preview;
+    image.alt = selected.image;
+</script>
 </body>
-
 </html>
